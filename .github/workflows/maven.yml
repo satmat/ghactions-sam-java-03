@@ -46,5 +46,5 @@ jobs:
       
       - name: Build & Deploy Cloudformation stacks
         run: |
-          sam build --template-file template.yaml
-          sam deploy --template-file template.yaml --no-fail-on-empty-changeset
+          sam build
+          sam deploy --no-fail-on-empty-changeset
