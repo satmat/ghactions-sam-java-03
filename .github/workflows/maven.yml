@@ -35,12 +35,15 @@ jobs:
       
       - name: Setup aws-sam
         uses: aws-actions/setup-sam@v2
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{vars.AWS_REGION}}
           role-to-assume: ${{vars.IAM_ROLE_ARN}}
+
       - run: aws sts get-caller-identity
+      
       - name: Build & Deploy Cloudformation stacks
         run: |
           sam build --template-file template.yaml
