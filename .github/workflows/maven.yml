@@ -34,5 +34,5 @@ jobs:
     - name: Upload a Built Artifact
       uses: actions/upload-artifact@v4
       with:
-          name: ghactions-sam-java-02
+          name: ghactions-sam-java-03
           path: HelloWorldFunction/target/HelloWorld-1.0.jar
